@@ -33,5 +33,10 @@ app.put('/tarefas/:id', (req, res) => {
 })
 
 //excluindo tarefas
+app.delete('/tarefas/:id', (req, res) => {
+    let index = buscarIndex(req.params.id)
+    tarefas.splice(index, 1)
+    res.send(tarefas)
+})
 
 export default app
