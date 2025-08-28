@@ -14,6 +14,11 @@ app.get('/', (req, res) => {
 })
 
 //criando tarefas
+app.post('/tarefas', (req, res) => {
+    tarefas.push(req.body)
+    res.status(201).json(tarefas)
+})
+
 //atualizando tarefas
 //excluindo tarefas
 
